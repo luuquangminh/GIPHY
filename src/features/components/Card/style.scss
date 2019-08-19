@@ -1,0 +1,10 @@
+.ant-card-actions{
+    background: none;
+    border-top: none;
+}
+.ant-card-body{
+    padding: 0;
+}
+.ant-card-actions > li:not(:last-child){
+    border-right: none;
+}

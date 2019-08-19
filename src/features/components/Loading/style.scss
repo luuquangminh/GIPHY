@@ -1,0 +1,25 @@
+.sweet-loading {
+    z-index: 999999;
+    background: #1e2b44;
+    opacity: .5;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    .ant-spin-text{
+        color:#fff;
+    }
+    &>div {
+        width: 100px;
+        height: 80px;
+        text-align: center;
+        font-size: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+}
