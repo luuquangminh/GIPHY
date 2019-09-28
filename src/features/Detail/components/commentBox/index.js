@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Input } from 'antd'
 import CommentLists from '../commentList'
 
@@ -33,7 +33,8 @@ function CommentBox() {
 
     const newComment = MockData.push(newItem)
     getComment(MockData)
-    console.log('value', comment)
+    setValue('')
+    console.log('ffff', comment)
   }
   return (
     <div>
