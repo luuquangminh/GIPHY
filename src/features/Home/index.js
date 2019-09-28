@@ -51,7 +51,7 @@ function Home(props) {
               }}
             >
               <Col lg={{ span: 6, offset: 0 }}>
-                <CardImage {...item} loading={loading} />
+                <CardImage {...item} loading={loading} {...props} />
                 {item.user ? (
                   <div className="profile">
                     {' '}

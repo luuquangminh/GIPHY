@@ -1,11 +1,13 @@
 import React from 'react'
 import { Card, Icon } from 'antd'
 import './style.scss'
-const CardImage = ({ images, loading }) => {
+const CardImage = ({ images, loading, history, id }) => {
+  console.log('images', images)
   return (
     <Card
       style={{ width: 250 }}
       loading={loading}
+      onClick={() => history.push(`/detail/${id}`)}
       cover={
         <div style={{ padding: '10px' }}>
           <div
