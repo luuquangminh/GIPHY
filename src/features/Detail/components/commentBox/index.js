@@ -2,21 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Input } from 'antd'
 import CommentLists from '../commentList'
 
-const MockData = [
-  {
-    id: 1,
-    user: 'Minh',
-    content: 'good',
-    date: '1000'
-  },
-  {
-    id: 2,
-    user: 'Duy',
-    content: 'best',
-    date: '1000'
-  }
-]
-function CommentBox() {
+function CommentBox({ MockData, rate }) {
   const { TextArea } = Input
   const [valueInput, setValue] = useState()
   const [comment, getComment] = useState([])
@@ -27,6 +13,7 @@ function CommentBox() {
     const newItem = {
       id: Date.now(),
       user: 'Minh',
+      rate: rate,
       content: valueInput,
       date: '1000'
     }
@@ -45,7 +32,6 @@ function CommentBox() {
         placeholder="Controlled autosize"
         autosize={{ minRows: 3, maxRows: 5 }}
       />
-      <CommentLists data={MockData} />
     </div>
   )
 }

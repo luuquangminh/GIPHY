@@ -1,0 +1,13 @@
+.detail-layout{
+    display: flex;
+    justify-content: space-between;
+    .detail-feature{
+        flex: 2;
+        margin: 0 20px;
+        text-align: left;
+    }
+}
+.comment-list{
+    text-align: left;
+    margin: 20px 0;
+}

@@ -1,0 +1,17 @@
+.comment{
+   display: flex;
+   width: 50%;
+   align-items: center;
+   justify-content:space-between
+
+}
+.user-infor{
+    flex: 1;
+    align-self: center;
+    .rate{
+        margin: 0 20px;
+    }
+}
+.description{
+    margin: 20px;
+}

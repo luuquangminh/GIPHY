@@ -7,6 +7,7 @@ import { CardImage, useModal, useLoading, SpinLoading } from '../components'
 import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 import './style.scss'
+import { PageHeader } from 'antd'
 
 function Home(props) {
   const { isShowing, toggle } = useModal()
@@ -76,6 +77,12 @@ function Home(props) {
   }, [])
   return (
     <React.Fragment>
+      <PageHeader
+        onBack={() => null}
+        title="Title"
+        subTitle="This is a subtitle"
+      />
+
       {loading ? <SpinLoading /> : GridLayout()}
       {isShowing && (
         <Lightbox
