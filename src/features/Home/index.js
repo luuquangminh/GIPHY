@@ -77,11 +77,7 @@ function Home(props) {
   }, [])
   return (
     <React.Fragment>
-      <PageHeader
-        onBack={() => null}
-        title="Title"
-        subTitle="This is a subtitle"
-      />
+      <PageHeader title="Home" />
 
       {loading ? <SpinLoading /> : GridLayout()}
       {isShowing && (

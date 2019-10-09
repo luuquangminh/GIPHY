@@ -7,7 +7,6 @@ import moment from 'moment'
 function CommentItem({ data }) {
   return (
     <React.Fragment>
-      <h2>Review:</h2>
       <div className="comment">
         <div className="user-infor">
           <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />

@@ -6,6 +6,8 @@ import CommentBox from './components/commentBox'
 import CommentLists from './components/commentList'
 import { Rate } from 'antd'
 import NormalLoginForm from './components/FormInput'
+import { PageHeader } from 'antd'
+
 import './style.scss'
 const MockData = [
   {
@@ -54,6 +56,8 @@ function Detail(props) {
   }, [])
   return (
     <React.Fragment>
+      <PageHeader title="Detail Page" />
+
       <div className="detail-layout">
         {!isEmpty(detail) && <CardDetail {...detail} />}
         <div className="detail-feature">
