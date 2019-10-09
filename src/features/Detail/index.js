@@ -5,6 +5,7 @@ import CardDetail from './components/cardDetail'
 import CommentBox from './components/commentBox'
 import CommentLists from './components/commentList'
 import { Rate } from 'antd'
+import NormalLoginForm from './components/FormInput'
 import './style.scss'
 const MockData = [
   {
@@ -12,24 +13,27 @@ const MockData = [
     user: 'Minh',
     content: 'good',
     rate: 5,
-    date: '1000'
+    date: 1570617900405
   },
   {
     id: 2,
     user: 'Duy',
     rate: 1,
     content: 'best',
-    date: '1000'
+    date: 157061790044
+  },
+  {
+    id: 3,
+    user: 'Nghia',
+    rate: 5,
+    content: 'Hay',
+    date: 1570617900402
   }
 ]
 function Detail(props) {
   const id = props.match.params.id
   const [detail, getDetailData] = useState([])
   const [rate, getRate] = useState(1)
-  const handleRate = value => {
-    console.log('value', value)
-    getRate(value)
-  }
   const getDetail = async () => {
     try {
       const { data } = await http.get({
@@ -44,7 +48,6 @@ function Detail(props) {
       console.log('error', error)
     }
   }
-  console.log('fdfd', detail)
 
   useEffect(() => {
     getDetail()
@@ -54,8 +57,12 @@ function Detail(props) {
       <div className="detail-layout">
         {!isEmpty(detail) && <CardDetail {...detail} />}
         <div className="detail-feature">
-          <Rate value={rate} onChange={handleRate} />
-          <CommentBox rate={rate} MockData={MockData} />
+          {/* <Rate value={rate} onChange={getRate} /> */}
+          <NormalLoginForm
+            mockData={MockData}
+            handleRate={getRate}
+            rate={rate}
+          />
         </div>
         {/* <CommentLists /> */}
       </div>
